@@ -106,6 +106,7 @@ Point NEXT_TO_TOP(Stack *S){
     }
 }
 
+// Used to check the functions
 /*
 void testStackFunctions() {
     Stack stack;
