@@ -110,7 +110,12 @@ Point NEXT_TO_TOP(Stack *S){
 /*
 void testStackFunctions() {
     Stack stack;
+
     CREATE(&stack);
+
+    POP(&stack);
+
+    printf("\n");
 
     printf("Testing PUSH function:\n");
     PUSH(&stack, 1.0, 2.0);   // Push (1.0, 2.0)
@@ -145,7 +150,14 @@ void testStackFunctions() {
 
     printf("\nTesting NEXT_TO_TOP function on empty stack:\n");
     Point nextToTopPointEmpty = NEXT_TO_TOP(&stack); // Should trigger error for not enough elements
+
+    // Test Overflow
+    printf("\nTesting Overflow condition:\n");
+    for (int i = 0; i < MAX + 1; i++) {
+        PUSH(&stack, (double)i, (double)(i + 1)); // Attempt to push points beyond capacity
+    }
 }
+
 
 int main() {
     
