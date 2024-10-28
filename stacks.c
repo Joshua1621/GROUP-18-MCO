@@ -18,8 +18,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-#define MAX 32768 // maximum number of elements in the stack
+// Maximum number of points
+#define MAX 32768
 
 
 typedef struct {
